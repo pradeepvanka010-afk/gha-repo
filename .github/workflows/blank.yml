@@ -1,19 +1,13 @@
 name: ci pipeline
-on: workflow_dispatch
+on: 
+  push:
+    branches:
+      - main
 jobs:
    build:
      runs-on: ubuntu-latest
      steps:
        - run: echo "this is build"
-   test:
-     needs: build
-     runs-on: ubuntu-latest
-     steps:
-       - run: echo "this is test"
-   deploy:
-      needs: test
-      runs-on: ubuntu-latest
-      steps:
-       - run: echo "this is deploy"
+
               
       
