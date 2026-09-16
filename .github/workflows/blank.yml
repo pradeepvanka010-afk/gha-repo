@@ -1,11 +1,17 @@
 name: ci pipeline
 on: workflow_dispatch
 jobs:
-  echo:
+ build:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-              echo "hello world"
-              echo "this is github actions"
+       - run: echo "this is build"
+  test:
+    runs-on: ubuntu-latest
+    steps:
+       - run: echo "this is test"
+   deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - run: echo "this is deploy"
               
       
