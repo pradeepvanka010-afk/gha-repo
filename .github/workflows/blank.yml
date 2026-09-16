@@ -4,7 +4,10 @@ jobs:
    build:
      runs-on: ubuntu-latest
      steps:
-       - run: echo "this is a test"
+       - name: checkout
+         uses: actions/checkout@v4
+       - name: read index file
+         run: cat index.html
 
               
       
